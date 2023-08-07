@@ -1,9 +1,10 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-const App = require('./nuevo-musico/home');
+const App = require('./pages/home');
+const pagenuevo = require("./pages/nuevo-musico")
 
 ReactDOM.render(
-	<App />,
+	<pagenuevo />,
 	document.getElementById('react')
 )
