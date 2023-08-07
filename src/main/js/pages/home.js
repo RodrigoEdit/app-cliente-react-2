@@ -19,13 +19,13 @@ class PageHome extends React.Component {
 	render() {
 		return (
 			<>
-                <h1>Demo App!</h1>
+				<h1>Demo App!</h1>
 				<Titulo entidad="Instrumentos" emoji="🎸" />
-				<Link to="/nuevo-instrumento">Nuevo Musico</Link>
 				<InstrumentoList instrumentos={this.state.instrumentos} />
+				<Link to="/nuevo-instrumento">Nuevo Instrumento</Link>
 				<Titulo entidad="Musicos" emoji="🎵" />
-				<Link to="/nuevo-musico">Nuevo Musico</Link>
 				<MusicoList musicos={this.state.musicos} />
+				<Link to="/nuevo-musico">Nuevo Musico</Link>
 			</>
 		)
 	}
@@ -49,12 +49,11 @@ class InstrumentoList extends React.Component {
 			<Instrumento key={instrumento._links.self.href} instrumento={instrumento} />
 		);
 		return (
-			<table>
+			<table border="1">
 				<tbody>
 					<tr>
 						<th>Nombre</th>
-						<th>Categoría</th>
-						<th>Descripción</th>
+						<th>Acciones</th>
 					</tr>
 					{instrumentos}
 				</tbody>
@@ -68,7 +67,7 @@ class MusicoList extends React.Component {
 			<Musico key={musico._links.self.href} musico={musico} />
 		);
 		return (
-			<table>
+			<table border="1">
 				<tbody>
 					<tr>
 						<th>Nombre</th>
@@ -82,11 +81,13 @@ class MusicoList extends React.Component {
 
 class Instrumento extends React.Component {
 	render() {
+		const id = this.props.instrumento._links.self.href.split("/").slice(-1);
 		return (
 			<tr>
 				<td>{this.props.instrumento.nombre}</td>
-				<td>{this.props.instrumento.categoria}</td>
-				<td>{this.props.instrumento.descripcion}</td>
+				<td>
+					<Link to={`/ver-instrumento/${id}`}>Ver</Link>
+				</td>
 			</tr>
 		)
 	}
