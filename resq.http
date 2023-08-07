@@ -1,4 +1,4 @@
-@server = https://rodrigoedit-congenial-umbrella-qj67pv7j6w6c9gg7-8080.preview.app.github.dev
+@server = http://localhost:8080
 
 @emp= {{server}}/api/employees
 ###
