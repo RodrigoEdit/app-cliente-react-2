@@ -1,6 +1,7 @@
 @server = http://localhost:8080
 
 @emp= {{server}}/api/employees
+@musicos = {{server}}/api/musicos
 ###
 GET {{emp}}
 
@@ -13,3 +14,10 @@ Content-Type: application/json
     "lastName": "Baggins",
     "description": "burglar"
 }
+
+
+###
+POST {{musicos}}
+Content-Type: application/json
+
+{"nombre": "Otro Músico"}
