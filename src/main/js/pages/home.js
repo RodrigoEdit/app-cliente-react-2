@@ -1,5 +1,6 @@
 const React = require('react');
 const client = require('../client');
+const { Link } = require('react-router-dom');
 
 class PageHome extends React.Component {
 	constructor(props) {
@@ -22,7 +23,7 @@ class PageHome extends React.Component {
 				<Titulo entidad="Instrumentos" emoji="🎸" />
 				<InstrumentoList instrumentos={this.state.instrumentos} />
 				<Titulo entidad="Musicos" emoji="🎵" />
-				<link ></link>
+				<Link to="/nuevo-musico">Nuevo Musico</Link>
 				<MusicoList musicos={this.state.musicos} />
 			</>
 		)

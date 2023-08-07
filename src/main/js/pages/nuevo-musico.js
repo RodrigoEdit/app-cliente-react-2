@@ -1,6 +1,6 @@
 const React = require('react');
 const client = require('../client');
-
+const { Link } = require('react-router-dom');
 
 const PageNuevoMusico = () =>{
     return(
@@ -11,6 +11,7 @@ const PageNuevoMusico = () =>{
                 <input type="text" name="nombre"></input>
                 <input type='submit' value="Nuevo Músico"></input>
             </form>
+            <Link to="/">Volver</Link>
         </>
     )
 }

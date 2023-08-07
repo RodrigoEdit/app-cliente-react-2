@@ -40865,6 +40865,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
+var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  Link = _require.Link;
 var PageHome = /*#__PURE__*/function (_React$Component) {
   _inherits(PageHome, _React$Component);
   var _super = _createSuper(PageHome);
@@ -40910,7 +40912,9 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/React.createElement(Titulo, {
         entidad: "Musicos",
         emoji: "\uD83C\uDFB5"
-      }), /*#__PURE__*/React.createElement("link", null), /*#__PURE__*/React.createElement(MusicoList, {
+      }), /*#__PURE__*/React.createElement(Link, {
+        to: "/nuevo-musico"
+      }, "Nuevo Musico"), /*#__PURE__*/React.createElement(MusicoList, {
         musicos: this.state.musicos
       }));
     }
@@ -41005,6 +41009,8 @@ module.exports = PageHome;
 
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
+var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  Link = _require.Link;
 var PageNuevoMusico = function PageNuevoMusico() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Musico"), /*#__PURE__*/React.createElement("form", null, /*#__PURE__*/React.createElement("label", null, "Nombres:"), /*#__PURE__*/React.createElement("input", {
     type: "text",
@@ -41012,7 +41018,9 @@ var PageNuevoMusico = function PageNuevoMusico() {
   }), /*#__PURE__*/React.createElement("input", {
     type: "submit",
     value: "Nuevo M\xFAsico"
-  })));
+  })), /*#__PURE__*/React.createElement(Link, {
+    to: "/"
+  }, "Volver"));
 };
 // npm i react-router-dom 
 module.exports = PageNuevoMusico;
