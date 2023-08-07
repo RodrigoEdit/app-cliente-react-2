@@ -7,8 +7,8 @@ const PageNuevoMusico = require("./pages/nuevo-musico")
 
 const router = createBrowserRouter(
 	[
-		{path: '/', element: PageHome},
-		{path: '/nuevo-musico', element: PageNuevoMusico},
+		{path: '/', element: <PageHome />},
+		{path: '/nuevo-musico', element: <PageNuevoMusico />},
 	]
 )
 

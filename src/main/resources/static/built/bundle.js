@@ -40803,10 +40803,10 @@ var PageHome = __webpack_require__(/*! ./pages/home */ "./src/main/js/pages/home
 var PageNuevoMusico = __webpack_require__(/*! ./pages/nuevo-musico */ "./src/main/js/pages/nuevo-musico.js");
 var router = createBrowserRouter([{
   path: '/',
-  element: PageHome
+  element: /*#__PURE__*/React.createElement(PageHome, null)
 }, {
   path: '/nuevo-musico',
-  element: PageNuevoMusico
+  element: /*#__PURE__*/React.createElement(PageNuevoMusico, null)
 }]);
 ReactDOM.render( /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(RouterProvider, {
   router: router
