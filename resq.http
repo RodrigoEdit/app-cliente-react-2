@@ -1,6 +1,6 @@
 @server = http://localhost:8080
 
-@emp= {{server}}/api/employees
+@emp= {{server}}/api/instrumentos
 @musicos = {{server}}/api/musicos
 ###
 GET {{emp}}

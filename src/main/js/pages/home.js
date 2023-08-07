@@ -21,6 +21,7 @@ class PageHome extends React.Component {
 			<>
                 <h1>Demo App!</h1>
 				<Titulo entidad="Instrumentos" emoji="🎸" />
+				<Link to="/nuevo-instrumento">Nuevo Musico</Link>
 				<InstrumentoList instrumentos={this.state.instrumentos} />
 				<Titulo entidad="Musicos" emoji="🎵" />
 				<Link to="/nuevo-musico">Nuevo Musico</Link>
