@@ -14,3 +14,5 @@ const PageNuevoMusico = () =>{
         </>
     )
 }
+// npm i react-router-dom 
+module.exports = PageNuevoMusico;
